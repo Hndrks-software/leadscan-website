@@ -7,8 +7,8 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-16 gradient-mesh overflow-hidden">
       {/* Decorative orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-[#9cbb48]/10 rounded-full blur-[100px]" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#2c4080]/20 rounded-full blur-[120px]" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-[#9cbb48]/5 rounded-full blur-[100px]" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#2c4080]/5 rounded-full blur-[120px]" />
 
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center max-w-4xl mx-auto">
@@ -30,13 +30,13 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold font-['Montserrat'] leading-[1.05] tracking-tight"
           >
-            <span className="text-white">Beurs leads</span>
+            <span className="text-gray-900">Beurs leads</span>
             <br />
             <span className="bg-gradient-to-r from-[#9cbb48] via-[#b8d462] to-[#9cbb48] bg-clip-text text-transparent animate-gradient">
               scannen & opvolgen
             </span>
             <br />
-            <span className="text-white">met AI</span>
+            <span className="text-gray-900">met AI</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -113,7 +113,7 @@ export function Hero() {
           >
             <div className="flex items-center gap-2 mb-2">
               <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center text-sm">🔥</div>
-              <div><p className="text-xs font-bold text-white">Hot Lead!</p><p className="text-[10px] text-gray-500">Zojuist gescand</p></div>
+              <div><p className="text-xs font-bold text-gray-900">Hot Lead!</p><p className="text-[10px] text-gray-500">Zojuist gescand</p></div>
             </div>
             <p className="text-[11px] text-gray-400">Jan de Vries — TechCorp BV</p>
           </motion.div>
@@ -125,7 +125,7 @@ export function Hero() {
           >
             <div className="flex items-center gap-2 mb-2">
               <Sparkles className="h-5 w-5 text-[#9cbb48]" />
-              <p className="text-xs font-bold text-white">AI Opvolging</p>
+              <p className="text-xs font-bold text-gray-900">AI Opvolging</p>
             </div>
             <p className="text-[11px] text-gray-400">"Beste Jan, leuk u ontmoet te hebben op de beurs..."</p>
           </motion.div>

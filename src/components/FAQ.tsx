@@ -42,7 +42,7 @@ export function FAQ() {
           className="text-center mb-16"
         >
           <span className="text-xs uppercase tracking-[0.2em] text-[#9cbb48] font-semibold">FAQ</span>
-          <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] text-white mt-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] text-gray-900 mt-4">
             Veelgestelde vragen
           </h2>
         </motion.div>
@@ -61,7 +61,7 @@ export function FAQ() {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between p-6 text-left"
               >
-                <span className="font-semibold text-white text-sm pr-4">{faq.q}</span>
+                <span className="font-semibold text-gray-900 text-sm pr-4">{faq.q}</span>
                 <ChevronDown className={`h-5 w-5 text-gray-400 flex-shrink-0 transition-transform ${openIndex === i ? 'rotate-180' : ''}`} />
               </button>
               {openIndex === i && (

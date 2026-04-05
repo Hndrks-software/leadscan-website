@@ -4,7 +4,7 @@ const APP_URL = 'https://leadsnapfh.netlify.app';
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 py-16 px-6">
+    <footer className="border-t border-gray-100 py-16 px-6 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
@@ -13,7 +13,7 @@ export function Footer() {
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#9cbb48] to-[#6e8435] flex items-center justify-center">
                 <Zap className="h-5 w-5 text-white" />
               </div>
-              <span className="text-lg font-bold font-['Montserrat'] text-white">LeadScan</span>
+              <span className="text-lg font-bold font-['Montserrat'] text-gray-900">LeadScan</span>
             </div>
             <p className="text-sm text-gray-500 leading-relaxed">
               AI-powered beurs lead capture. Scan, kwalificeer en volg op — alles in één platform.
@@ -52,9 +52,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-600">© 2026 LeadScan. Alle rechten voorbehouden.</p>
-          <p className="text-xs text-gray-600">Made with AI in the Netherlands 🇳🇱</p>
+        <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-gray-400">© 2026 LeadScan. Alle rechten voorbehouden.</p>
+          <p className="text-xs text-gray-400">Made with AI in the Netherlands 🇳🇱</p>
         </div>
       </div>
     </footer>

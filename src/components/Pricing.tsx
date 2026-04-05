@@ -47,7 +47,7 @@ export function Pricing() {
           className="text-center mb-16"
         >
           <span className="text-xs uppercase tracking-[0.2em] text-[#9cbb48] font-semibold">Prijzen</span>
-          <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] text-white mt-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] text-gray-900 mt-4">
             Simpele, eerlijke prijzen
           </h2>
           <p className="text-lg text-gray-400 mt-4">Start gratis, upgrade wanneer je wilt</p>
@@ -57,7 +57,7 @@ export function Pricing() {
             <span className={`text-sm ${!yearly ? 'text-white' : 'text-gray-500'}`}>Maandelijks</span>
             <button
               onClick={() => setYearly(!yearly)}
-              className={`w-12 h-6 rounded-full transition-colors relative ${yearly ? 'bg-[#9cbb48]' : 'bg-white/10'}`}
+              className={`w-12 h-6 rounded-full transition-colors relative ${yearly ? 'bg-[#9cbb48]' : 'bg-gray-200'}`}
             >
               <div className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-transform ${yearly ? 'left-7' : 'left-1'}`} />
             </button>
@@ -87,17 +87,17 @@ export function Pricing() {
                 </div>
               )}
 
-              <h3 className="text-xl font-bold font-['Montserrat'] text-white">{plan.name}</h3>
+              <h3 className="text-xl font-bold font-['Montserrat'] text-gray-900">{plan.name}</h3>
               <p className="text-sm text-gray-400 mt-1">{plan.desc}</p>
 
               <div className="mt-6 mb-8">
                 {plan.monthlyPrice === 0 ? (
-                  <span className="text-5xl font-extrabold font-['Montserrat'] text-white">Gratis</span>
+                  <span className="text-5xl font-extrabold font-['Montserrat'] text-gray-900">Gratis</span>
                 ) : plan.monthlyPrice === -1 ? (
-                  <span className="text-3xl font-extrabold font-['Montserrat'] text-white">Op maat</span>
+                  <span className="text-3xl font-extrabold font-['Montserrat'] text-gray-900">Op maat</span>
                 ) : (
                   <>
-                    <span className="text-5xl font-extrabold font-['Montserrat'] text-white">
+                    <span className="text-5xl font-extrabold font-['Montserrat'] text-gray-900">
                       €{yearly ? plan.yearlyPrice : plan.monthlyPrice}
                     </span>
                     <span className="text-gray-400 text-sm">/maand</span>
@@ -107,7 +107,7 @@ export function Pricing() {
 
               <ul className="space-y-3 mb-8">
                 {plan.features.map((f, j) => (
-                  <li key={j} className="flex items-center gap-3 text-sm text-gray-300">
+                  <li key={j} className="flex items-center gap-3 text-sm text-gray-600">
                     <CheckCircle2 className={`h-4 w-4 flex-shrink-0 ${plan.popular ? 'text-[#9cbb48]' : 'text-gray-500'}`} />
                     {f}
                   </li>
@@ -119,7 +119,7 @@ export function Pricing() {
                 className={`block text-center py-3.5 rounded-xl font-semibold text-sm transition-all ${
                   plan.popular
                     ? 'bg-[#9cbb48] text-white hover:bg-[#8aaa3d] hover:shadow-lg hover:shadow-green-600/20'
-                    : 'bg-white/5 text-white border border-white/10 hover:bg-white/10'
+                    : 'bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200'
                 }`}
               >
                 {plan.cta}

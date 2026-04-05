@@ -14,7 +14,7 @@ export function FinalCTA() {
         viewport={{ once: true }}
         className="max-w-3xl mx-auto text-center relative"
       >
-        <h2 className="text-4xl md:text-6xl font-extrabold font-['Montserrat'] text-white leading-tight">
+        <h2 className="text-4xl md:text-6xl font-extrabold font-['Montserrat'] text-gray-900 leading-tight">
           Klaar om 10x sneller
           <br />
           <span className="bg-gradient-to-r from-[#9cbb48] to-[#b8d462] bg-clip-text text-transparent">

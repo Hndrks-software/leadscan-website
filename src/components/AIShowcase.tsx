@@ -71,7 +71,7 @@ export function AIShowcase() {
                 <Sparkles className="h-4 w-4" />
                 AI-Powered
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] text-white mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold font-['Montserrat'] text-gray-900 mb-8">
                 AI die jouw sales workflow transformeert
               </h2>
               <div className="space-y-4">
@@ -85,7 +85,7 @@ export function AIShowcase() {
                     className="flex items-center gap-3"
                   >
                     <CheckCircle2 className="h-5 w-5 text-[#9cbb48] flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">{item}</span>
+                    <span className="text-gray-600 text-sm">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -97,9 +97,9 @@ export function AIShowcase() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="bg-[#0a0b14] rounded-2xl border border-white/10 overflow-hidden">
+              <div className="bg-gray-900 rounded-2xl border border-gray-800 overflow-hidden shadow-2xl">
                 {/* Window chrome */}
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5">
+                <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-800">
                   <div className="w-3 h-3 rounded-full bg-red-500/60" />
                   <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
                   <div className="w-3 h-3 rounded-full bg-green-500/60" />

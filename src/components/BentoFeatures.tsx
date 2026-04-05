@@ -57,7 +57,7 @@ export function BentoFeatures() {
           className="text-center mb-16"
         >
           <span className="text-xs uppercase tracking-[0.2em] text-[#9cbb48] font-semibold">Features</span>
-          <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] text-white mt-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] text-gray-900 mt-4">
             Alles wat je nodig hebt
           </h2>
           <p className="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
@@ -81,7 +81,7 @@ export function BentoFeatures() {
               >
                 <feature.icon className="h-6 w-6" style={{ color: feature.color }} />
               </div>
-              <h3 className="text-lg font-bold font-['Montserrat'] text-white mb-3">{feature.title}</h3>
+              <h3 className="text-lg font-bold font-['Montserrat'] text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
             </motion.div>
           ))}
