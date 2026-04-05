@@ -1,0 +1,133 @@
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle2 } from 'lucide-react';
+
+const APP_URL = 'https://leadsnapfh.netlify.app';
+
+const plans = [
+  {
+    name: 'Starter',
+    monthlyPrice: 0,
+    yearlyPrice: 0,
+    desc: 'Perfect om te starten',
+    features: ['1 gebruiker', '50 leads per maand', 'AI visitekaartje scanner', 'Basis dashboard', 'Email support'],
+    cta: 'Gratis starten',
+    popular: false,
+  },
+  {
+    name: 'Team',
+    monthlyPrice: 49,
+    yearlyPrice: 39,
+    desc: 'Voor groeiende sales teams',
+    features: ['10 gebruikers', 'Onbeperkt leads', 'AI opvolg-berichten', 'Pipeline view', 'Voice-to-text notities', 'Lead enrichment', 'CSV & rapport export', 'Prioriteit support'],
+    cta: 'Start 14 dagen gratis',
+    popular: true,
+  },
+  {
+    name: 'Enterprise',
+    monthlyPrice: -1,
+    yearlyPrice: -1,
+    desc: 'Voor grote organisaties',
+    features: ['Onbeperkt gebruikers', 'Onbeperkt leads', 'Alles van Team', 'Custom branding', 'API toegang', 'SSO integratie', 'Dedicated account manager', 'Custom onboarding'],
+    cta: 'Neem contact op',
+    popular: false,
+  },
+];
+
+export function Pricing() {
+  const [yearly, setYearly] = useState(false);
+
+  return (
+    <section id="pricing" className="py-28 px-6">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <span className="text-xs uppercase tracking-[0.2em] text-[#9cbb48] font-semibold">Prijzen</span>
+          <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] text-white mt-4">
+            Simpele, eerlijke prijzen
+          </h2>
+          <p className="text-lg text-gray-400 mt-4">Start gratis, upgrade wanneer je wilt</p>
+
+          {/* Toggle */}
+          <div className="flex items-center justify-center gap-3 mt-8">
+            <span className={`text-sm ${!yearly ? 'text-white' : 'text-gray-500'}`}>Maandelijks</span>
+            <button
+              onClick={() => setYearly(!yearly)}
+              className={`w-12 h-6 rounded-full transition-colors relative ${yearly ? 'bg-[#9cbb48]' : 'bg-white/10'}`}
+            >
+              <div className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-transform ${yearly ? 'left-7' : 'left-1'}`} />
+            </button>
+            <span className={`text-sm ${yearly ? 'text-white' : 'text-gray-500'}`}>
+              Jaarlijks <span className="text-[#9cbb48] text-xs font-semibold">-20%</span>
+            </span>
+          </div>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
+          {plans.map((plan, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className={`rounded-3xl p-8 relative ${
+                plan.popular
+                  ? 'bg-gradient-to-b from-[#9cbb48]/10 to-transparent border-2 border-[#9cbb48]/30 shadow-[0_0_60px_-20px_rgba(156,187,72,0.3)]'
+                  : 'glass'
+              }`}
+            >
+              {plan.popular && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#9cbb48] text-white text-xs font-bold rounded-full">
+                  Meest gekozen
+                </div>
+              )}
+
+              <h3 className="text-xl font-bold font-['Montserrat'] text-white">{plan.name}</h3>
+              <p className="text-sm text-gray-400 mt-1">{plan.desc}</p>
+
+              <div className="mt-6 mb-8">
+                {plan.monthlyPrice === 0 ? (
+                  <span className="text-5xl font-extrabold font-['Montserrat'] text-white">Gratis</span>
+                ) : plan.monthlyPrice === -1 ? (
+                  <span className="text-3xl font-extrabold font-['Montserrat'] text-white">Op maat</span>
+                ) : (
+                  <>
+                    <span className="text-5xl font-extrabold font-['Montserrat'] text-white">
+                      €{yearly ? plan.yearlyPrice : plan.monthlyPrice}
+                    </span>
+                    <span className="text-gray-400 text-sm">/maand</span>
+                  </>
+                )}
+              </div>
+
+              <ul className="space-y-3 mb-8">
+                {plan.features.map((f, j) => (
+                  <li key={j} className="flex items-center gap-3 text-sm text-gray-300">
+                    <CheckCircle2 className={`h-4 w-4 flex-shrink-0 ${plan.popular ? 'text-[#9cbb48]' : 'text-gray-500'}`} />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={`${APP_URL}/auth`}
+                className={`block text-center py-3.5 rounded-xl font-semibold text-sm transition-all ${
+                  plan.popular
+                    ? 'bg-[#9cbb48] text-white hover:bg-[#8aaa3d] hover:shadow-lg hover:shadow-green-600/20'
+                    : 'bg-white/5 text-white border border-white/10 hover:bg-white/10'
+                }`}
+              >
+                {plan.cta}
+              </a>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
