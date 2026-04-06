@@ -41,7 +41,7 @@ export function FAQ() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-xs uppercase tracking-[0.2em] text-[#9cbb48] font-semibold">FAQ</span>
+          <span className="text-xs uppercase tracking-[0.2em] text-[#4F46E5] font-semibold">FAQ</span>
           <h2 className="text-4xl md:text-5xl font-bold font-['Montserrat'] text-gray-900 mt-4">
             Veelgestelde vragen
           </h2>
@@ -66,7 +66,7 @@ export function FAQ() {
               </button>
               {openIndex === i && (
                 <div className="px-6 pb-6 -mt-2">
-                  <p className="text-sm text-gray-400 leading-relaxed">{faq.a}</p>
+                  <p className="text-sm text-slate-500 leading-relaxed">{faq.a}</p>
                 </div>
               )}
             </motion.div>

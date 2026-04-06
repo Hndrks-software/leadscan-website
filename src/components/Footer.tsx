@@ -1,4 +1,5 @@
 import { Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const APP_URL = 'https://leadsnapfh.netlify.app';
 
@@ -10,7 +11,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#9cbb48] to-[#6e8435] flex items-center justify-center">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#4F46E5] to-[#7C3AED] flex items-center justify-center">
                 <Zap className="h-5 w-5 text-white" />
               </div>
               <span className="text-lg font-bold font-['Montserrat'] text-gray-900">LeadScan</span>
@@ -24,10 +25,10 @@ export function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-[0.15em] text-gray-400 font-semibold mb-4">Product</h4>
             <ul className="space-y-3">
-              <li><a href="#features" className="text-sm text-gray-500 hover:text-white transition-colors">Features</a></li>
-              <li><a href="#pricing" className="text-sm text-gray-500 hover:text-white transition-colors">Prijzen</a></li>
-              <li><a href="#how-it-works" className="text-sm text-gray-500 hover:text-white transition-colors">Hoe het werkt</a></li>
-              <li><a href="#ai-showcase" className="text-sm text-gray-500 hover:text-white transition-colors">AI Features</a></li>
+              <li><a href="#features" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Features</a></li>
+              <li><a href="#pricing" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Prijzen</a></li>
+              <li><a href="#how-it-works" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Hoe het werkt</a></li>
+              <li><a href="#ai-showcase" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">AI Features</a></li>
             </ul>
           </div>
 
@@ -35,9 +36,9 @@ export function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-[0.15em] text-gray-400 font-semibold mb-4">Bedrijf</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Over ons</a></li>
-              <li><a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Privacy</a></li>
-              <li><a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Voorwaarden</a></li>
+              <li><a href="#" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Over ons</a></li>
+              <li><Link to="/security" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Beveiliging & Privacy</Link></li>
+              <li><a href="#" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Voorwaarden</a></li>
             </ul>
           </div>
 
@@ -45,9 +46,9 @@ export function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-[0.15em] text-gray-400 font-semibold mb-4">Aan de slag</h4>
             <ul className="space-y-3">
-              <li><a href={`${APP_URL}/auth`} className="text-sm text-gray-500 hover:text-white transition-colors">Inloggen</a></li>
-              <li><a href={`${APP_URL}/auth`} className="text-sm text-gray-500 hover:text-white transition-colors">Gratis account aanmaken</a></li>
-              <li><a href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Contact</a></li>
+              <li><a href={`${APP_URL}/auth`} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Inloggen</a></li>
+              <li><a href={`${APP_URL}/auth`} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Gratis account aanmaken</a></li>
+              <li><a href="#" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
